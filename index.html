@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Car Show | Fort Hays Tech Northwest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+        .font-heading { font-family: 'Bebas+Neue', sans-serif; }
+        .bg-tiger-gold { background-color: #f7b733; }
+        .text-tiger-gold { color: #f7b733; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-zinc-900 text-white font-sans">
+
+    <nav class="bg-zinc-800 sticky top-0 z-50 border-b border-zinc-700">
+        <div class="flex items-center justify-between px-4 md:px-8 py-4">
+            <div class="flex items-center gap-2 md:gap-4">
+                <img src="./Logos/VICTORETMBLACK-01(5).png" alt="Tiger Logo" class="h-10 md:h-12 w-auto">
+                <span class="font-heading text-2xl md:text-3xl tracking-wide uppercase">Tiger Car Show</span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-tiger-gold transition">Home</a>
+                <a href="#registration" class="hover:text-tiger-gold transition">Registration</a>
+                <a href="#sponsors" class="hover:text-tiger-gold transition">Sponsors</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#registration" class="hidden sm:block bg-sky-500 hover:bg-sky-600 text-white px-4 md:px-6 py-2 rounded-lg font-bold transition text-sm md:text-base uppercase">Register</a>
+                
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-800 border-b border-zinc-700 px-4 py-4 space-y-4 font-bold uppercase tracking-widest text-center">
+            <a href="#home" class="block hover:text-tiger-gold py-2">Home</a>
+            <a href="#registration" class="block hover:text-tiger-gold py-2">Registration</a>
+            <a href="#sponsors" class="block hover:text-tiger-gold py-2">Sponsors</a>
+        </div>
+    </nav>
+
+    <header id="home" class="relative min-h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+        <img src="Hero.png" alt="Red Camaro" class="absolute w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="font-heading text-6xl sm:text-7xl md:text-9xl text-tiger-gold drop-shadow-2xl italic">TIGER CAR SHOW</h1>
+            <p class="text-xl md:text-3xl font-bold mt-2 uppercase tracking-tighter">May 2nd, 2026 | Goodland, KS</p>
+            
+            <div id="countdown" class="grid grid-cols-2 sm:flex gap-3 md:gap-4 justify-center mt-8 font-heading text-4xl md:text-6xl">
+                <div class="bg-zinc-800/80 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] border border-tiger-gold/30">
+                    <span id="days">00</span><p class="text-[10px] md:text-sm font-sans uppercase tracking-widest">Days</p>
+                </div>
+                <div class="bg-zinc-800/80 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] border border-tiger-gold/30">
+                    <span id="hours">00</span><p class="text-[10px] md:text-sm font-sans uppercase tracking-widest">Hrs</p>
+                </div>
+                <div class="bg-zinc-800/80 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] border border-tiger-gold/30">
+                    <span id="minutes">00</span><p class="text-[10px] md:text-sm font-sans uppercase tracking-widest">Min</p>
+                </div>
+                <div class="bg-zinc-800/80 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] border border-tiger-gold/30">
+                    <span id="seconds">00</span><p class="text-[10px] md:text-sm font-sans uppercase tracking-widest">Sec</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 md:py-16 px-6 md:px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div class="order-2 md:order-1">
+            <h2 class="font-heading text-4xl md:text-5xl text-tiger-gold mb-6 text-center md:text-left">Event Schedule (MT)</h2>
+            <ul class="space-y-4 text-lg md:text-xl border-l-4 border-tiger-gold pl-6">
+                <li><strong class="text-tiger-gold">8:00 AM – 10:00 AM:</strong> Car Registration</li>
+                <li><strong class="text-tiger-gold">10:00 AM:</strong> Public Showing</li>
+                <li><strong class="text-tiger-gold">3:00 PM:</strong> Awards Ceremony</li>
+                <li><strong class="text-tiger-gold">4:00 PM:</strong> Event Close</li>
+            </ul>
+        </div>
+        <div class="order-1 md:order-2 bg-zinc-800 p-6 md:p-8 rounded-2xl border border-zinc-700">
+            <h2 class="font-heading text-4xl md:text-5xl text-tiger-gold mb-6">Location</h2>
+            <p class="text-lg mb-4 italic">Max Jones Fieldhouse Parking Lot<br>Goodland, Kansas</p>
+            <div class="rounded-lg overflow-hidden h-48 md:h-64 border border-zinc-600">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCMk17ZD_xJqng-luNQcKkFVIwlUGAkZGI&q=39.346417,-101.701556" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="py-12 md:py-16 bg-zinc-800">
+        <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+            <h2 class="font-heading text-5xl md:text-6xl text-tiger-gold mb-4">Register Now</h2>
+            <p class="mb-8 text-zinc-300">$15 Online Registration / $25 In-Person</p>
+            <div class="bg-white rounded-2xl overflow-hidden h-[500px] md:h-[600px] w-full shadow-2xl">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSedskrgFaeRUq5VJEHdgHyOEQ8pV-uRDX_M-ls1urnInx6sFA/viewform?embedded=true" class="w-full h-full" frameborder="0">Loading form...</iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="py-16 md:py-20 px-6 md:px-8 max-w-6xl mx-auto">
+        <h2 class="font-heading text-5xl md:text-6xl text-center mb-12 md:mb-16 underline decoration-tiger-gold decoration-4">Our Sponsors</h2>
+        <div class="text-center py-10 md:py-12 bg-zinc-800/50 rounded-3xl border-2 border-dashed border-zinc-700">
+            <h3 class="font-heading text-4xl md:text-5xl text-tiger-gold tracking-widest uppercase italic px-4">Sponsors Coming Soon</h3>
+            <p class="text-zinc-400 mt-4 text-lg md:text-xl tracking-tight px-4">Check back soon to see the local businesses supporting our show!</p>
+        </div>
+    </section>
+
+    
+
+    <footer class="bg-black py-12 px-6 md:px-8 border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col sm:flex-row items-center gap-6 md:gap-8 text-center sm:text-left">
+                <img src="./Logos/SkillsUsaFNHW.png" alt="SkillsUSA Kansas" class="h-12 md:h-16 rounded-2xl">
+                <div class="hidden sm:block h-12 w-px bg-zinc-700"></div>
+                <img src="./Logos/FortHaysLogoBanner.png" alt="Fort Hays Tech | Northwest" class="h-12 md:h-16 rounded-2xl">
+            </div>
+            <p class="text-zinc-500 text-sm md:text-base">Fort Hays Tech | Northwest <br> Made By Students of App Development</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Countdown Logic
+        const targetDate = new Date("May 2, 2026 08:00:00").getTime();
+        const updateCountdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById("countdown").innerHTML = "<p class='w-full text-center'>EVENT STARTED!</p>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
